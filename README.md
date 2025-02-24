@@ -4,6 +4,10 @@ This is a test to see if using Puppeteer would allow me to export png files in t
 
 The short of it is that the way puppeteer communicates with the chromium process it launches, no.
 
+Puppeteer uses the Chrome Developer Protocol to communicate with the chromium instance is creates. It calls the [Page.captureScreenshot](https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-captureScreenshot) when a screenshot is taken of a page. There are no options in that function to set any options about the colorspace the page is running in.
+
+Likewise, when launching the browser instance, there seem to be no options related to the color mode of the browser.
+
 ## Running
 
 `$ deno run dev` - Runs the vite server
