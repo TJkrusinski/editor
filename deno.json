@@ -1,0 +1,44 @@
+{
+  "tasks": {
+    "dev": "deno run -A --node-modules-dir npm:vite",
+    "build": "deno run -A --node-modules-dir npm:vite build",
+    "preview": "deno run -A --node-modules-dir npm:vite preview",
+    "serve": "deno run --allow-net --allow-read jsr:@std/http@1/file-server dist/"
+  },
+  "lint": {
+    "include": ["src/", "server/", "shared/"],
+    "exclude": [],
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  },
+  "compilerOptions": {
+    "jsx": "react",
+    "noImplicitReturns": true,
+    "lib": ["deno.ns", "deno.unstable", "dom"]
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": ["src/", "server/", "shared/"]
+  },
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
+    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.0.7",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.4",
+    "pupeteer": "npm:pupeteer@^0.0.1",
+    "puppeteer": "npm:puppeteer@^24.2.1",
+    "react": "npm:react@^18.3.1",
+    "react-router-dom": "npm:react-router-dom@^6.2.1",
+    "react-dom": "npm:react-dom@^18.3.1",
+    "tailwindcss": "npm:tailwindcss@^4.0.7",
+    "vite": "npm:vite@^6.0.1"
+  }
+}

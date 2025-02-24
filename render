@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+ffmpeg -framerate 60 -pattern_type glob -i "out/frame-*.png" -pix_fmt yuva444p10le -color_primaries bt2020 -colorspace bt2020nc -profile:v 4 -c:v prores_ks output.mov
