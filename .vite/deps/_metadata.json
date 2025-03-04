@@ -1,61 +1,196 @@
 {
-  "hash": "88cae9f0",
-  "configHash": "99c52717",
+  "hash": "2c70623f",
+  "configHash": "fc93f561",
   "lockfileHash": "e3b0c442",
-  "browserHash": "f4074791",
+  "browserHash": "277a3f57",
   "optimized": {
     "react": {
-      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/index.js",
+      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "204193e4",
+      "fileHash": "296ec1ad",
       "needsInterop": true
     },
     "react-dom": {
-      "src": "../../node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/index.js",
+      "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "94e58784",
+      "fileHash": "050fcd78",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
-      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/jsx-dev-runtime.js",
+      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "3bd755c6",
+      "fileHash": "c9bc5984",
       "needsInterop": true
     },
     "react/jsx-runtime": {
-      "src": "../../node_modules/.deno/react@18.3.1/node_modules/react/jsx-runtime.js",
+      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "060cc96b",
+      "fileHash": "1daa090d",
       "needsInterop": true
     },
-    "react-dom/client": {
-      "src": "../../node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/client.js",
-      "file": "react-dom_client.js",
-      "fileHash": "94896a6c",
+    "npm:konva": {
+      "src": "../../node_modules/.deno/konva@9.3.18/node_modules/konva/lib/index.js",
+      "file": "npm_konva.js",
+      "fileHash": "41d2227d",
       "needsInterop": true
     },
-    "react-router-dom": {
-      "src": "../../node_modules/.deno/react-router-dom@7.1.5/node_modules/react-router-dom/dist/index.mjs",
-      "file": "react-router-dom.js",
-      "fileHash": "5b3e3e9f",
+    "npm:react-konva": {
+      "src": "../../node_modules/.deno/react-konva@19.0.3/node_modules/react-konva/es/ReactKonva.js",
+      "file": "npm_react-konva.js",
+      "fileHash": "a6746963",
       "needsInterop": false
     },
+    "npm:react-router": {
+      "src": "../../node_modules/.deno/react-router@7.2.0/node_modules/react-router/dist/development/index.mjs",
+      "file": "npm_react-router.js",
+      "fileHash": "03393ba9",
+      "needsInterop": false
+    },
+    "npm:react-router-dom": {
+      "src": "../../node_modules/.deno/react-router-dom@6.30.0/node_modules/react-router-dom/dist/index.js",
+      "file": "npm_react-router-dom.js",
+      "fileHash": "ab766aa9",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "94d943b6",
+      "needsInterop": true
+    },
     "react-router": {
-      "src": "../../node_modules/.deno/react-router@7.1.5/node_modules/react-router/dist/development/index.mjs",
+      "src": "../../node_modules/.deno/react-router@7.2.0/node_modules/react-router/dist/development/index.mjs",
       "file": "react-router.js",
-      "fileHash": "b50a9ec4",
+      "fileHash": "cecf11ea",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/.deno/react-router-dom@6.30.0/node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "2d623d8e",
+      "needsInterop": false
+    },
+    "konva": {
+      "src": "../../node_modules/.deno/konva@9.3.18/node_modules/konva/lib/index.js",
+      "file": "konva.js",
+      "fileHash": "e1a1989c",
+      "needsInterop": true
+    },
+    "react-konva": {
+      "src": "../../node_modules/.deno/react-konva@19.0.3/node_modules/react-konva/es/ReactKonva.js",
+      "file": "react-konva.js",
+      "fileHash": "ff208578",
+      "needsInterop": false
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/.deno/@react-three+fiber@9.0.4/node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "46a27488",
+      "needsInterop": false
+    },
+    "@react-three/flex": {
+      "src": "../../node_modules/.deno/@react-three+flex@1.0.1/node_modules/@react-three/flex/dist/index.js",
+      "file": "@react-three_flex.js",
+      "fileHash": "4dcb1683",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/.deno/@react-three+drei@10.0.3/node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "04365fad",
+      "needsInterop": false
+    },
+    "@react-three/uikit": {
+      "src": "../../node_modules/.deno/@react-three+uikit@0.8.7/node_modules/@react-three/uikit/dist/index.js",
+      "file": "@react-three_uikit.js",
+      "fileHash": "92949fcd",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "946eb06f",
+      "needsInterop": false
+    },
+    "three/addons/exporters/EXRExporter.js": {
+      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/examples/jsm/exporters/EXRExporter.js",
+      "file": "three_addons_exporters_EXRExporter__js.js",
+      "fileHash": "58e184e8",
+      "needsInterop": false
+    },
+    "react-icons": {
+      "src": "../../node_modules/.deno/react-icons@5.5.0/node_modules/react-icons/index.mjs",
+      "file": "react-icons.js",
+      "fileHash": "c4588453",
+      "needsInterop": false
+    },
+    "class-variance-authority": {
+      "src": "../../node_modules/.deno/class-variance-authority@0.7.1/node_modules/class-variance-authority/dist/index.mjs",
+      "file": "class-variance-authority.js",
+      "fileHash": "ebf236dc",
+      "needsInterop": false
+    },
+    "highlight.js": {
+      "src": "../../node_modules/.deno/highlight.js@11.11.1/node_modules/highlight.js/es/index.js",
+      "file": "highlight__js.js",
+      "fileHash": "cd09b5d6",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-NPZFCLNF": {
-      "file": "chunk-NPZFCLNF.js"
+    "chunk-KM2QE5NZ": {
+      "file": "chunk-KM2QE5NZ.js"
     },
-    "chunk-2IQIHYQM": {
-      "file": "chunk-2IQIHYQM.js"
+    "hls-YOJJMU43": {
+      "file": "hls-YOJJMU43.js"
     },
-    "chunk-EGVBHC52": {
-      "file": "chunk-EGVBHC52.js"
+    "chunk-4FI2II5B": {
+      "file": "chunk-4FI2II5B.js"
+    },
+    "vision_bundle-BJFFU62B": {
+      "file": "vision_bundle-BJFFU62B.js"
+    },
+    "chunk-DBQBYXD4": {
+      "file": "chunk-DBQBYXD4.js"
+    },
+    "chunk-XFDCAXLH": {
+      "file": "chunk-XFDCAXLH.js"
+    },
+    "chunk-TGNUAKHS": {
+      "file": "chunk-TGNUAKHS.js"
+    },
+    "chunk-HJFBY2B7": {
+      "file": "chunk-HJFBY2B7.js"
+    },
+    "chunk-NB2WUPZA": {
+      "file": "chunk-NB2WUPZA.js"
+    },
+    "chunk-3VNYQIZC": {
+      "file": "chunk-3VNYQIZC.js"
+    },
+    "chunk-WD4Q2UKC": {
+      "file": "chunk-WD4Q2UKC.js"
+    },
+    "chunk-YSZR34LG": {
+      "file": "chunk-YSZR34LG.js"
+    },
+    "chunk-PCTF3SCU": {
+      "file": "chunk-PCTF3SCU.js"
+    },
+    "chunk-D5LHJSDE": {
+      "file": "chunk-D5LHJSDE.js"
+    },
+    "chunk-QENOKVOZ": {
+      "file": "chunk-QENOKVOZ.js"
+    },
+    "chunk-ET2PY5DM": {
+      "file": "chunk-ET2PY5DM.js"
+    },
+    "chunk-SNDYCGXT": {
+      "file": "chunk-SNDYCGXT.js"
+    },
+    "chunk-LK32TJAX": {
+      "file": "chunk-LK32TJAX.js"
     }
   }
 }

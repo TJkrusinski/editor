@@ -8,6 +8,8 @@ type EditorContextType = EditorState & {
   incrementFrame: () => void;
   decrementFrame: () => void;
   setDimentions: (height: number, width: number) => void;
+  advance: () => void;
+  setAdvance: (advance: () => void) => void;
 };
 
 export const EditorContext = createContext<EditorContextType>({
@@ -19,6 +21,8 @@ export const EditorContext = createContext<EditorContextType>({
   setDimentions: () => {},
   decrementFrame: () => {},
   incrementFrame: () => {},
+  advance: () => {},
+  setAdvance: () => {},
 });
 
 export const useEditorContext = (): EditorContextType => {
@@ -35,6 +39,8 @@ export const EditorContextProvider = (
     height: 2160,
     width: 3840,
   });
+
+  const [advance, setAdvance] = useState<() => void>(() => {});
 
   useEffect(() => {
     socketContext.socket.onMessage((message) => {
@@ -61,6 +67,7 @@ export const EditorContextProvider = (
         setFrame: (frame: number) => {
           setState({ ...state, frame });
         },
+        advance: advance,
         decrementFrame: () => {
           if (state.frame > 1) {
             setState((state) => {
@@ -101,6 +108,10 @@ export const EditorContextProvider = (
             type: 'setEditorState',
             payload: newState,
           });
+        },
+        setAdvance: (fn) => {
+          const newState = { ...state, advance: fn };
+          setState(newState);
         },
       }}
     >

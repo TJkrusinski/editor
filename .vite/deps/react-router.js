@@ -63,6 +63,7 @@ import {
   generatePath,
   getPatchRoutesOnNavigationFunction,
   getSingleFetchDataStrategy,
+  href,
   invariant,
   isCookie,
   isRouteErrorResponse,
@@ -110,8 +111,9 @@ import {
   useSearchParams,
   useSubmit,
   useViewTransitionState
-} from "./chunk-NPZFCLNF.js";
-import "./chunk-EGVBHC52.js";
+} from "./chunk-ET2PY5DM.js";
+import "./chunk-SNDYCGXT.js";
+import "./chunk-LK32TJAX.js";
 export {
   Await,
   BrowserRouter,
@@ -181,6 +183,7 @@ export {
   createStaticRouter,
   data,
   generatePath,
+  href,
   isCookie,
   isRouteErrorResponse,
   isSession,

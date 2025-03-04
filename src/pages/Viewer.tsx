@@ -1,217 +1,140 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import useCurrentFrame from '../hooks/useCurrentFrame.ts';
 import { useEditorContext } from '../lib/EditorContext.tsx';
-
-const map = (
-  value: number,
-  domainStart: number,
-  domainEnd: number,
-  rangeStart: number,
-  rangeEnd: number,
-) => {
-  return (
-    ((value - domainStart) / (domainEnd - domainStart)) *
-      (rangeEnd - rangeStart) + rangeStart
-  );
-};
+import { Canvas, ThreeElements, useFrame, useThree } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import { Container, Root, Text } from '@react-three/uikit';
+import { EXRExporter } from 'three/addons/exporters/EXRExporter.js';
+import { FloatType, RGBAFormat, WebGLRenderTarget } from 'three';
+import * as THREE from 'three';
+import App from '../scenes/Main.tsx';
 
 const supports = CSS.supports('color', 'color(rec2020 1 0 0)');
 
-const Viewer = () => {
+function saveArrayBuffer(
+  buffer: Uint8Array<ArrayBufferLike>,
+  filename: string,
+) {
+  const blob = new Blob([buffer], { type: 'image/x-exr' });
+  const link = document.createElement('a');
+
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
+}
+
+const ExportEXR = () => {
+  const { gl, scene, camera, size } = useThree();
+  const renderTarget = useMemo(() => {
+    return new WebGLRenderTarget(size.width, size.height, {
+      format: RGBAFormat,
+      type: FloatType,
+    });
+  }, [size.width, size.height]);
+
+  const captureRef = useRef(false);
+
+  useFrame(() => {
+    if (captureRef.current) {
+      gl.setRenderTarget(renderTarget);
+      gl.render(scene, camera);
+      gl.setRenderTarget(null);
+      saveEXR(renderTarget);
+      captureRef.current = false;
+    }
+  });
+
+  const saveEXR = async (target: WebGLRenderTarget) => {
+    gl.readRenderTargetPixels(
+      target,
+      0,
+      0,
+      size.width,
+      size.height,
+      new Float32Array(size.width * size.height * 4), // Read HDR pixel data
+    );
+
+    const data = new Float32Array(size.width * size.height * 4);
+    gl.readRenderTargetPixels(target, 0, 0, size.width, size.height, data);
+
+    const exporter = new EXRExporter();
+
+    const EXR = await exporter.parse(gl, renderTarget);
+
+    saveArrayBuffer(EXR, 'export.exr');
+  };
+};
+
+const Controller: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { gl, setFrameloop } = useThree();
+
+  useEffect(() => {
+  }, []);
+
+  return children;
+};
+
+const Viewer: React.FC<
+  {
+    renderBackground?: boolean;
+    scale: number;
+  }
+> = (
+  { renderBackground, scale },
+) => {
   const editorContext = useEditorContext();
   const currentFrame = useCurrentFrame();
 
-  const x = map(
-    currentFrame,
-    0,
-    editorContext.length,
-    0,
-    editorContext.width,
-  );
-
-  const y = map(
-    currentFrame,
-    0,
-    editorContext.length,
-    0,
-    editorContext.height,
-  );
-
   return (
     <div
-      className='p-3 relative overflow-hidden'
+      className={`p-3 relative overflow-hidden ${
+        renderBackground ? 'bg-black' : ''
+      }`}
       style={{
-        width: `${editorContext.width}px`,
-        height: `${editorContext.height}px`,
+        aspectRatio: '16 / 9',
       }}
     >
-      <div>
-        <div
-          className=''
-          style={{
-            color: 'color(rec2020 1 0 0)',
-          }}
-        >
-          viewer supports rec2020: {supports ? 'yes' : 'no'}
-        </div>
-
-        <div
-          style={{
-            color: `color(rec2020 0 1 0)`,
-            position: 'absolute',
-            top: `${y}px`,
-            left: `${x}px`,
-            fontSize: '100px',
-          }}
-        >
-          {currentFrame}
-        </div>
-
-        <div
-          style={{
-            position: 'absolute',
-            left: '400px',
-            top: '400px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(rec2020 1 0 0)',
-          }}
-        >
-          red
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '500px',
-            top: '400px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(rec2020 0 1 0)',
-          }}
-        >
-          green
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '600px',
-            top: '400px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(rec2020 0 0 1)',
-          }}
-        >
-          blue
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '700px',
-            top: '400px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(rec2020 1 1 1)',
-          }}
-        >
-          white
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '800px',
-            top: '400px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(rec2020 0.5 0.5 0.5)',
-          }}
-        >
-          50% gray
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '900px',
-            top: '400px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(rec2020 0 0 0)',
-          }}
-        >
-          black
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '400px',
-            top: '500px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(srgb 1 0 0)',
-          }}
-        >
-          red
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '500px',
-            top: '500px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(srgb 0 1 0)',
-          }}
-        >
-          green
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '600px',
-            top: '500px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(srgb 0 0 1)',
-          }}
-        >
-          blue
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '700px',
-            top: '500px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(srgb 1 1 1)',
-          }}
-        >
-          white
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '800px',
-            top: '500px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(srgb 0.5 0.5 0.5)',
-          }}
-        >
-          50% gray
-        </div>
-        <div
-          style={{
-            position: 'absolute',
-            left: '900px',
-            top: '500px',
-            width: '100px',
-            height: '100px',
-            backgroundColor: 'color(srgb 0 0 0)',
-          }}
-        >
-          black
-        </div>
-      </div>
+      <Canvas
+        resize={{ scroll: false, offsetSize: true }}
+        frameloop='demand'
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          touchAction: 'none',
+          width: `${editorContext.width}px`,
+          height: `${editorContext.height}px`,
+          transform: `scale(${scale / 100})`,
+          transformOrigin: 'top left',
+        }}
+        camera={{
+          position: [0, 0, 18],
+          fov: 35,
+          zoom: 100,
+        }}
+        gl={{ localClippingEnabled: true }}
+        orthographic
+        flat
+      >
+        <Controller>
+          <ambientLight intensity={Math.PI / 2} />
+          <spotLight
+            position={[10, 10, 10]}
+            angle={0.15}
+            penumbra={1}
+            decay={0}
+            intensity={Math.PI}
+          />
+          <pointLight
+            position={[-10, -10, -10]}
+            decay={0}
+            intensity={Math.PI}
+          />
+          <Root sizeX={editorContext.width} sizeY={editorContext.height}>
+            <App />
+          </Root>
+        </Controller>
+      </Canvas>
     </div>
   );
 };

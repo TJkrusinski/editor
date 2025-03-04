@@ -1,38 +1,8 @@
 import {
-  require_react_dom
-} from "./chunk-2IQIHYQM.js";
-import {
-  __commonJS
-} from "./chunk-EGVBHC52.js";
-
-// node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/client.js
-var require_client = __commonJS({
-  "node_modules/.deno/react-dom@18.3.1/node_modules/react-dom/client.js"(exports) {
-    var m = require_react_dom();
-    if (false) {
-      exports.createRoot = m.createRoot;
-      exports.hydrateRoot = m.hydrateRoot;
-    } else {
-      i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-      exports.createRoot = function(c, o) {
-        i.usingClientEntryPoint = true;
-        try {
-          return m.createRoot(c, o);
-        } finally {
-          i.usingClientEntryPoint = false;
-        }
-      };
-      exports.hydrateRoot = function(c, h, o) {
-        i.usingClientEntryPoint = true;
-        try {
-          return m.hydrateRoot(c, h, o);
-        } finally {
-          i.usingClientEntryPoint = false;
-        }
-      };
-    }
-    var i;
-  }
-});
+  require_client
+} from "./chunk-DBQBYXD4.js";
+import "./chunk-3VNYQIZC.js";
+import "./chunk-D5LHJSDE.js";
+import "./chunk-SNDYCGXT.js";
+import "./chunk-LK32TJAX.js";
 export default require_client();
-//# sourceMappingURL=react-dom_client.js.map
