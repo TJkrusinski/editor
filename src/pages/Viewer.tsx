@@ -8,6 +8,7 @@ import { EXRExporter } from 'three/addons/exporters/EXRExporter.js';
 import { FloatType, RGBAFormat, WebGLRenderTarget } from 'three';
 import * as THREE from 'three';
 import App from '../scenes/Main.tsx';
+import MonoFontProvider from '../components/MonoFont.tsx';
 
 const supports = CSS.supports('color', 'color(rec2020 1 0 0)');
 
@@ -117,22 +118,24 @@ const Viewer: React.FC<
         flat
       >
         <Controller>
-          <ambientLight intensity={Math.PI / 2} />
-          <spotLight
-            position={[10, 10, 10]}
-            angle={0.15}
-            penumbra={1}
-            decay={0}
-            intensity={Math.PI}
-          />
-          <pointLight
-            position={[-10, -10, -10]}
-            decay={0}
-            intensity={Math.PI}
-          />
-          <Root sizeX={editorContext.width} sizeY={editorContext.height}>
-            <App />
-          </Root>
+          <MonoFontProvider>
+            <ambientLight intensity={Math.PI / 2} />
+            <spotLight
+              position={[10, 10, 10]}
+              angle={0.15}
+              penumbra={1}
+              decay={0}
+              intensity={Math.PI}
+            />
+            <pointLight
+              position={[-10, -10, -10]}
+              decay={0}
+              intensity={Math.PI}
+            />
+            <Root sizeX={editorContext.width} sizeY={editorContext.height}>
+              <App />
+            </Root>
+          </MonoFontProvider>
         </Controller>
       </Canvas>
     </div>

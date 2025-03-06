@@ -138,8 +138,7 @@ const ControlPanel = () => {
       className='p-3 bg-black relative'
       style={{
         width: '100vw',
-        height: '100vh',
-        overflow: 'hidden',
+        minHeight: '100vh',
       }}
     >
       <div className='flex flex-col justify-between h-full w-full'>

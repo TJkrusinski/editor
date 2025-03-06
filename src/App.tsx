@@ -20,7 +20,7 @@ const App = () => {
         >
           <Routes>
             <Route path='/' element={<ControlPanel />} />
-            <Route path='/viewer' element={<Viewer />} />
+            <Route path='/viewer' element={<Viewer scale={1} />} />
           </Routes>
         </BrowserRouter>
       </EditorContextProvider>
