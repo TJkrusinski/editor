@@ -7,7 +7,7 @@ const MonoFontProvider: React.FC<{ children: React.ReactNode }> = (
   return (
     <FontFamilyProvider
       mono={{
-        medium: '/mono/mono-msdf.json',
+        medium: '/hack/hack-mono.json',
       }}
     >
       {children}

@@ -41,6 +41,7 @@
     "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.4",
     "class-variance-authority": "npm:class-variance-authority@^0.7.1",
     "highlight.js": "npm:highlight.js@^11.11.1",
+    "msdf-bmfont-xml": "npm:msdf-bmfont-xml@^2.7.0",
     "puppeteer": "npm:puppeteer@^24.2.1",
     "react": "npm:react@^19.0.0",
     "react-dom": "npm:react-dom@^19.0.0",
