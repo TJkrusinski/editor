@@ -1,196 +1,103 @@
 {
-  "hash": "2c70623f",
-  "configHash": "fc93f561",
+  "hash": "8345bc96",
+  "configHash": "6432873e",
   "lockfileHash": "e3b0c442",
-  "browserHash": "277a3f57",
+  "browserHash": "2703d386",
   "optimized": {
     "react": {
       "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "296ec1ad",
+      "fileHash": "d0fabf93",
       "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "050fcd78",
+      "fileHash": "e4a10a9e",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "c9bc5984",
+      "fileHash": "3b26b15a",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "1daa090d",
+      "fileHash": "17698a71",
       "needsInterop": true
-    },
-    "npm:konva": {
-      "src": "../../node_modules/.deno/konva@9.3.18/node_modules/konva/lib/index.js",
-      "file": "npm_konva.js",
-      "fileHash": "41d2227d",
-      "needsInterop": true
-    },
-    "npm:react-konva": {
-      "src": "../../node_modules/.deno/react-konva@19.0.3/node_modules/react-konva/es/ReactKonva.js",
-      "file": "npm_react-konva.js",
-      "fileHash": "a6746963",
-      "needsInterop": false
-    },
-    "npm:react-router": {
-      "src": "../../node_modules/.deno/react-router@7.2.0/node_modules/react-router/dist/development/index.mjs",
-      "file": "npm_react-router.js",
-      "fileHash": "03393ba9",
-      "needsInterop": false
-    },
-    "npm:react-router-dom": {
-      "src": "../../node_modules/.deno/react-router-dom@6.30.0/node_modules/react-router-dom/dist/index.js",
-      "file": "npm_react-router-dom.js",
-      "fileHash": "ab766aa9",
-      "needsInterop": false
-    },
-    "react-dom/client": {
-      "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/client.js",
-      "file": "react-dom_client.js",
-      "fileHash": "94d943b6",
-      "needsInterop": true
-    },
-    "react-router": {
-      "src": "../../node_modules/.deno/react-router@7.2.0/node_modules/react-router/dist/development/index.mjs",
-      "file": "react-router.js",
-      "fileHash": "cecf11ea",
-      "needsInterop": false
-    },
-    "react-router-dom": {
-      "src": "../../node_modules/.deno/react-router-dom@6.30.0/node_modules/react-router-dom/dist/index.js",
-      "file": "react-router-dom.js",
-      "fileHash": "2d623d8e",
-      "needsInterop": false
-    },
-    "konva": {
-      "src": "../../node_modules/.deno/konva@9.3.18/node_modules/konva/lib/index.js",
-      "file": "konva.js",
-      "fileHash": "e1a1989c",
-      "needsInterop": true
-    },
-    "react-konva": {
-      "src": "../../node_modules/.deno/react-konva@19.0.3/node_modules/react-konva/es/ReactKonva.js",
-      "file": "react-konva.js",
-      "fileHash": "ff208578",
-      "needsInterop": false
     },
     "@react-three/fiber": {
-      "src": "../../node_modules/.deno/@react-three+fiber@9.0.4/node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "src": "../../node_modules/.deno/@react-three+fiber@9.0.4_1/node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
       "file": "@react-three_fiber.js",
-      "fileHash": "46a27488",
-      "needsInterop": false
-    },
-    "@react-three/flex": {
-      "src": "../../node_modules/.deno/@react-three+flex@1.0.1/node_modules/@react-three/flex/dist/index.js",
-      "file": "@react-three_flex.js",
-      "fileHash": "4dcb1683",
-      "needsInterop": false
-    },
-    "@react-three/drei": {
-      "src": "../../node_modules/.deno/@react-three+drei@10.0.3/node_modules/@react-three/drei/index.js",
-      "file": "@react-three_drei.js",
-      "fileHash": "04365fad",
+      "fileHash": "f1a1a0f5",
       "needsInterop": false
     },
     "@react-three/uikit": {
-      "src": "../../node_modules/.deno/@react-three+uikit@0.8.7/node_modules/@react-three/uikit/dist/index.js",
+      "src": "../../node_modules/.deno/@react-three+uikit@0.8.7_1/node_modules/@react-three/uikit/dist/index.js",
       "file": "@react-three_uikit.js",
-      "fileHash": "92949fcd",
-      "needsInterop": false
-    },
-    "three": {
-      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/build/three.module.js",
-      "file": "three.js",
-      "fileHash": "946eb06f",
-      "needsInterop": false
-    },
-    "three/addons/exporters/EXRExporter.js": {
-      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/examples/jsm/exporters/EXRExporter.js",
-      "file": "three_addons_exporters_EXRExporter__js.js",
-      "fileHash": "58e184e8",
-      "needsInterop": false
-    },
-    "react-icons": {
-      "src": "../../node_modules/.deno/react-icons@5.5.0/node_modules/react-icons/index.mjs",
-      "file": "react-icons.js",
-      "fileHash": "c4588453",
+      "fileHash": "56121696",
       "needsInterop": false
     },
     "class-variance-authority": {
       "src": "../../node_modules/.deno/class-variance-authority@0.7.1/node_modules/class-variance-authority/dist/index.mjs",
       "file": "class-variance-authority.js",
-      "fileHash": "ebf236dc",
+      "fileHash": "7cd42eb3",
       "needsInterop": false
     },
     "highlight.js": {
       "src": "../../node_modules/.deno/highlight.js@11.11.1/node_modules/highlight.js/es/index.js",
       "file": "highlight__js.js",
-      "fileHash": "cd09b5d6",
+      "fileHash": "8137d2d3",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "75da481d",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/.deno/react-router-dom@6.30.0/node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "e11d7ec7",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "1d0358f0",
+      "needsInterop": false
+    },
+    "three/addons/exporters/EXRExporter.js": {
+      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/examples/jsm/exporters/EXRExporter.js",
+      "file": "three_addons_exporters_EXRExporter__js.js",
+      "fileHash": "facd9b0c",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-KM2QE5NZ": {
-      "file": "chunk-KM2QE5NZ.js"
+    "chunk-WR7EEQMI": {
+      "file": "chunk-WR7EEQMI.js"
     },
-    "hls-YOJJMU43": {
-      "file": "hls-YOJJMU43.js"
+    "chunk-VKY5NJB3": {
+      "file": "chunk-VKY5NJB3.js"
     },
-    "chunk-4FI2II5B": {
-      "file": "chunk-4FI2II5B.js"
+    "chunk-OYCKGQTE": {
+      "file": "chunk-OYCKGQTE.js"
     },
-    "vision_bundle-BJFFU62B": {
-      "file": "vision_bundle-BJFFU62B.js"
+    "chunk-II7JUPKJ": {
+      "file": "chunk-II7JUPKJ.js"
     },
-    "chunk-DBQBYXD4": {
-      "file": "chunk-DBQBYXD4.js"
+    "chunk-PHMBILKM": {
+      "file": "chunk-PHMBILKM.js"
     },
-    "chunk-XFDCAXLH": {
-      "file": "chunk-XFDCAXLH.js"
+    "chunk-OC4QNQR3": {
+      "file": "chunk-OC4QNQR3.js"
     },
-    "chunk-TGNUAKHS": {
-      "file": "chunk-TGNUAKHS.js"
-    },
-    "chunk-HJFBY2B7": {
-      "file": "chunk-HJFBY2B7.js"
-    },
-    "chunk-NB2WUPZA": {
-      "file": "chunk-NB2WUPZA.js"
-    },
-    "chunk-3VNYQIZC": {
-      "file": "chunk-3VNYQIZC.js"
-    },
-    "chunk-WD4Q2UKC": {
-      "file": "chunk-WD4Q2UKC.js"
-    },
-    "chunk-YSZR34LG": {
-      "file": "chunk-YSZR34LG.js"
-    },
-    "chunk-PCTF3SCU": {
-      "file": "chunk-PCTF3SCU.js"
-    },
-    "chunk-D5LHJSDE": {
-      "file": "chunk-D5LHJSDE.js"
-    },
-    "chunk-QENOKVOZ": {
-      "file": "chunk-QENOKVOZ.js"
-    },
-    "chunk-ET2PY5DM": {
-      "file": "chunk-ET2PY5DM.js"
-    },
-    "chunk-SNDYCGXT": {
-      "file": "chunk-SNDYCGXT.js"
-    },
-    "chunk-LK32TJAX": {
-      "file": "chunk-LK32TJAX.js"
+    "chunk-EWTE5DHJ": {
+      "file": "chunk-EWTE5DHJ.js"
     }
   }
 }

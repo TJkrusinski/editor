@@ -26,7 +26,7 @@ export class Socket {
     this.socket.addEventListener('open', () => {
       this.openCallbacks.forEach((callback) => callback());
       // see if there is a value `socketId` in the queryString of the URL
-      const url = new URL(window.location.href);
+      const url = new URL(globalThis.location.href);
       const socketId = url.searchParams.get('socketId');
       if (socketId) {
         this.emit({ type: 'setSocketId', payload: { id: socketId } });
@@ -112,7 +112,7 @@ export const useSocketContext = (): SocketContextType => {
   return useContext(SocketContext);
 };
 
-export const SocketContextProvider = (
+export const SocketContextProvider: React.FC<{ children: React.ReactNode }> = (
   { children }: { children: React.ReactNode },
 ) => {
   const [state, setState] = useState<SocketContextType>({

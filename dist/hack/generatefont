@@ -1,0 +1,3 @@
+#!/bin/bash
+
+npx msdf-bmfont-xml -f json hack-mono.ttf -i charset.txt -m 256,512 -o hack/mono -s 48

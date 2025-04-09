@@ -29,7 +29,7 @@ export const useEditorContext = (): EditorContextType => {
   return useContext(EditorContext);
 };
 
-export const EditorContextProvider = (
+export const EditorContextProvider: React.FC<{ children: React.ReactNode }> = (
   { children }: { children: React.ReactNode },
 ) => {
   const socketContext = useSocketContext();
