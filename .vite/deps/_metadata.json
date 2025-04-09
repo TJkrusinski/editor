@@ -1,103 +1,61 @@
 {
-  "hash": "8345bc96",
-  "configHash": "6432873e",
+  "hash": "0127c590",
+  "configHash": "b23cdecd",
   "lockfileHash": "e3b0c442",
-  "browserHash": "2703d386",
+  "browserHash": "526e5095",
   "optimized": {
     "react": {
-      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/index.js",
+      "src": "../../node_modules/.deno/react@19.1.0/node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "d0fabf93",
+      "fileHash": "2be1daa9",
       "needsInterop": true
     },
     "react-dom": {
-      "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/index.js",
+      "src": "../../node_modules/.deno/react-dom@19.1.0/node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "e4a10a9e",
+      "fileHash": "69754708",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
-      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-dev-runtime.js",
+      "src": "../../node_modules/.deno/react@19.1.0/node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "3b26b15a",
+      "fileHash": "01428091",
       "needsInterop": true
     },
     "react/jsx-runtime": {
-      "src": "../../node_modules/.deno/react@19.0.0/node_modules/react/jsx-runtime.js",
+      "src": "../../node_modules/.deno/react@19.1.0/node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "17698a71",
+      "fileHash": "10d55450",
       "needsInterop": true
-    },
-    "@react-three/fiber": {
-      "src": "../../node_modules/.deno/@react-three+fiber@9.0.4_1/node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
-      "file": "@react-three_fiber.js",
-      "fileHash": "f1a1a0f5",
-      "needsInterop": false
-    },
-    "@react-three/uikit": {
-      "src": "../../node_modules/.deno/@react-three+uikit@0.8.7_1/node_modules/@react-three/uikit/dist/index.js",
-      "file": "@react-three_uikit.js",
-      "fileHash": "56121696",
-      "needsInterop": false
     },
     "class-variance-authority": {
       "src": "../../node_modules/.deno/class-variance-authority@0.7.1/node_modules/class-variance-authority/dist/index.mjs",
       "file": "class-variance-authority.js",
-      "fileHash": "7cd42eb3",
-      "needsInterop": false
-    },
-    "highlight.js": {
-      "src": "../../node_modules/.deno/highlight.js@11.11.1/node_modules/highlight.js/es/index.js",
-      "file": "highlight__js.js",
-      "fileHash": "8137d2d3",
+      "fileHash": "6a1bcf2b",
       "needsInterop": false
     },
     "react-dom/client": {
-      "src": "../../node_modules/.deno/react-dom@19.0.0/node_modules/react-dom/client.js",
+      "src": "../../node_modules/.deno/react-dom@19.1.0/node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "75da481d",
+      "fileHash": "04610d10",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/.deno/react-router-dom@6.30.0/node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "e11d7ec7",
-      "needsInterop": false
-    },
-    "three": {
-      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/build/three.module.js",
-      "file": "three.js",
-      "fileHash": "1d0358f0",
-      "needsInterop": false
-    },
-    "three/addons/exporters/EXRExporter.js": {
-      "src": "../../node_modules/.deno/three@0.174.0/node_modules/three/examples/jsm/exporters/EXRExporter.js",
-      "file": "three_addons_exporters_EXRExporter__js.js",
-      "fileHash": "facd9b0c",
+      "fileHash": "6a356bbd",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-WR7EEQMI": {
-      "file": "chunk-WR7EEQMI.js"
+    "chunk-XLYC43JK": {
+      "file": "chunk-XLYC43JK.js"
     },
-    "chunk-VKY5NJB3": {
-      "file": "chunk-VKY5NJB3.js"
+    "chunk-DOHIVV7P": {
+      "file": "chunk-DOHIVV7P.js"
     },
-    "chunk-OYCKGQTE": {
-      "file": "chunk-OYCKGQTE.js"
-    },
-    "chunk-II7JUPKJ": {
-      "file": "chunk-II7JUPKJ.js"
-    },
-    "chunk-PHMBILKM": {
-      "file": "chunk-PHMBILKM.js"
-    },
-    "chunk-OC4QNQR3": {
-      "file": "chunk-OC4QNQR3.js"
-    },
-    "chunk-EWTE5DHJ": {
-      "file": "chunk-EWTE5DHJ.js"
+    "chunk-5WRI5ZAA": {
+      "file": "chunk-5WRI5ZAA.js"
     }
   }
 }

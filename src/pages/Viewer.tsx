@@ -27,15 +27,20 @@ const Viewer: React.FC<
   const currentFrame = useCurrentFrame();
 
   return (
-    <div
-      className={`p-3 relative overflow-hidden ${
-        renderBackground ? 'bg-black' : ''
-      }`}
-      style={{
-        aspectRatio: '16 / 9',
-      }}
-    >
-      <Main />
+    <div className='bg-white'>
+      <div
+        className='relative overflow-hidden'
+        style={{
+          aspectRatio: '16 / 9',
+          backgroundImage:
+            `linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc),
+                          linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc)`,
+          backgroundSize: '20px 20px',
+          backgroundPosition: '0 0, 10px 10px',
+        }}
+      >
+        <Main />
+      </div>
     </div>
   );
 };
